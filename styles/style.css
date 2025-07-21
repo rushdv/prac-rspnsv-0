@@ -125,6 +125,44 @@ main > section{
 
 
 
+/* features section styles */
+.features-section{ 
+    gap: 100px;
+}
+#features-section-title{
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+.features-card .features-title{
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.features-card{
+    padding: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+    margin-bottom: 20px;
+    border-radius: 8px;  
+}
+.features-architect img{
+    width: 100%;
+}
+#exp-badge{
+    padding: 40px 38px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-left: -80px;
+    margin-top: -120px;
+}
+#exp-year{
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+
+
+
 /* facts styles */
 
 #fact-description{
@@ -157,24 +195,77 @@ main > section{
     margin-top: 10px;
 }
 
+
+
+
+
+
+
+/* sponsors styles */
+
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.sponsor-companies img{
+    filter: grayscale(100%);
+}
+
+
+
+
+
+/* footer styles */
+footer{
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 1440px;
+    padding: 20px;
+    text-align: center;
+    
+}
+footer p{
+
+}
+
+
+
+
+
+
+
 /* responsive media query */
 
 @media screen and (max-width: 576px) {
     .navbar, 
     .nav-links,
-    .teams{
+    .teams,
+    .features-section{
         flex-direction: column;
     }
 
     .team-img-container,
-    .facts-container{
+    .facts-container,
+    .sponsor-companies{
         grid-template-columns: repeat(1, 1fr);
     }
     .our-features{
         margin-left: 20px;
     }
-    .facts-container{
+    .facts-container,
+    .sponsor-companies{
         justify-items: center;
+        gap: 24px;
+    }
+    #exp-badge{
+        margin-top: 20px;
+        margin-left: 20px;
     }
 }
 
@@ -182,10 +273,21 @@ main > section{
 /* medium size device */
 
 @media screen and (min-width: 576px) and (max-width: 992px){
-    .teams{
+    .teams,
+    .features-section{
         flex-direction: column;
     }
     .our-features{
         margin: 50px auto;
+    }
+    .facts-container,
+    .sponsor-companies{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        justify-items: center;
+    }
+    #exp-badge{
+        margin-top: 20px;
+        margin-left: 20px;
     }
 }
